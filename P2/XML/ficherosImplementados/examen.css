@@ -1,0 +1,32 @@
+cuestionario{
+	background-color:aquamarine;
+	font-family: sans-serif;
+	text-align: center;
+	margin: 10px auto;	
+	color: black;
+	width: 900px;
+	border-bottom: solid 3px; 
+	border-right:solid 3px; 
+	border-left: solid 3px;
+}
+
+enunciado{
+	
+	text-align: left;
+	border-bottom: solid 3px; 
+	border-top: solid 3px;
+	font-size: 100%;
+	font-weight: bolder;
+	color: black;
+	display: block;
+	background-color: 	#ff5e00;
+}
+
+resp1,resp2,resp3,resp4,respnum,resplibre{
+	text-align: left;
+	font-size: 100%;
+	color: black;
+	display: block;
+    font-weight: bold;
+}
+

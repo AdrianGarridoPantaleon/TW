@@ -1,0 +1,262 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+h2{
+    text-align:center;
+    color: #000;
+}
+
+p{
+    text-align:center;
+    justify-content: center;
+}
+
+table { 
+    margin: 0 auto; 
+    
+}
+
+#titulo img{
+
+background-attachment: fixed;
+}
+
+#imagenes{
+    padding: 20px;
+    text-align: center;
+}
+
+#tabla{
+    display: grid;
+    grid-template-columns: none;
+}
+
+#footer{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image:url(imagenes/fondo.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    
+}
+
+ #header{
+    
+     background: url(imagenes/dark.jpg) ;
+     background-repeat: no-repeat;
+     background-size:cover;
+     background-attachment:fixed;
+ }
+
+#boton-menu{
+     display: none; }
+
+ #header label{
+     display: none;
+     width: 30px;
+     height: 30px;
+     padding: 10px;
+         
+ }
+
+#header label:hover{
+    cursor: pointer;
+    background: #4E94AB;
+}
+
+#menu ul{
+    margin-top: 20px;
+    list-style: none;
+    padding: 0;
+    display: flex;   
+    justify-content: center; 
+}
+
+#menu li:hover{
+    background: rgba(0, 0, 0, 0.3);
+}
+
+#menu li a{
+    display: block;
+    padding: 11px 20px;
+    color: #fff;
+    text-decoration: none;
+    background: #4E94AB;
+}
+#menu li a:hover{
+  
+    background: #1d576a;
+}
+
+#menu li ul{
+    margin-top: 0px;
+    display: none;
+    position: absolute;
+    background: #4E94AB;
+    min-width: 100%;
+}
+
+#menu li:hover > ul{
+    display: block;
+   
+}
+
+#menu li ul li{
+    position: relative;
+}
+
+#menu li ul li ul{
+    right: -200px;
+    top: 0px;
+}
+
+#grid-html h2{
+    background: #4E94AB;
+}
+
+#productos h2{
+    background: #4E94AB; 
+}
+
+#productos th a {
+    text-decoration: none;
+}
+
+#adición h3{
+    background: #4E94AB;
+    
+}
+
+
+#marcas h3{
+    background: #4E94AB;
+   
+}
+
+#adición p{
+    text-align: end;
+    text-decoration: none;
+}
+
+#adición a{
+    
+    text-decoration: none;
+}
+
+#grid-html a{
+    text-decoration: none;
+    text-align: justify;
+}
+
+#grid-html h2{
+    background: #4E94AB;
+    border: 1px solid #000;
+}
+
+#grid-html {
+
+    grid-template-columns: 50% 50%;
+    padding: 1em;
+}
+
+#grid-plus {
+
+    grid-template-columns: 50% 50%;
+    padding: 1em;
+}
+
+#grid-plus h2{
+    background: #4E94AB;
+    border: 1px solid #000;
+}
+#grid-plus h3{
+   
+    border: 1px solid #000;
+}
+
+#marcas h2{
+    background: #4E94AB;
+}
+
+#adición h2{
+    background: #4E94AB;
+}
+
+#cuerpo h2{
+    background:#4E94AB;
+    border: 1px solid #000;
+}
+
+#footer h2{
+    background: #4E94AB;
+    border: 1px solid #000;
+}
+
+#grid-html td{
+    text-align: center;
+}
+
+#autor{
+    padding: 20px;
+    text-align: center;
+}
+
+@media (max-width:768px){
+    #header label{
+        display: block;       
+    }
+    #menu{
+        position: absolute;
+        background: #4E94AB;
+        width: 70%;
+        margin-left:-70%;
+        transition: all 0s;
+    }
+    #menu ul{
+        flex-direction: column;      
+        margin-top: 0%;  
+    }
+    #menu li{
+        border-top: 1px solid #fff;
+    }
+    #menu li ul{
+       margin-top:-41px;
+        margin-left:100%;
+    }
+    #boton-menu:checked ~ #menu{
+        margin: 0;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

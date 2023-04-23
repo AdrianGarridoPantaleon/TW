@@ -1,0 +1,276 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+h2{
+    text-align:center;
+    color: #000;
+}
+
+p{
+    text-align:center;
+    justify-content: center;
+}
+
+table { 
+    margin: 0 auto; 
+    
+}
+
+form{
+    text-align: center;
+    background: white;
+
+    box-shadow: 0 0 6px 0 #ffffffcc;
+    border-radius: 10px;
+}
+
+main {
+	max-width: 1240px;
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%, -10%);
+
+}
+
+#banner {
+    width: 115px;
+    height: 60px;
+    position: absolute;
+    background-color: yellow;
+    text-align: center;
+    border-radius: 15%;
+}
+
+#banner1 {
+    width: 115px;
+    height: 60px;
+    position: absolute;
+    background-color: green;
+    text-align: center;
+    border-radius: 15%;
+}
+
+#Animation{    
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    background-image:url("imagenes/tenis.png");
+    background-size: contain;
+}
+
+#restringido h1{
+    background-color: red;
+    padding: 60px;
+}
+
+#titulo img{
+
+background-attachment: fixed;
+}
+
+#imagenes{
+    padding: 20px;
+    text-align: center;
+}
+
+#tabla{
+    display: grid;
+    grid-template-columns: none;
+}
+
+#footer{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+body{
+    
+    font-family: Arial, Helvetica, sans-serif;
+    background: #16BFFD;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #CB3066, #16BFFD);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #CB3066, #16BFFD); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 1700px;
+}
+
+ #header{
+    
+     background-repeat: no-repeat;
+     background-size:cover;
+     background-attachment:fixed;
+ }
+
+#boton-menu{
+     display: none; }
+
+ #header label{
+     display: none;
+     width: 30px;
+     height: 30px;
+     padding: 10px;
+         
+ }
+
+#header label:hover{
+    cursor: pointer;
+    background: #4E94AB;
+}
+
+#menu ul{
+    margin-top: 20px;
+    list-style: none;
+    padding: 0;
+    display: flex;   
+    justify-content:left; 
+   
+}
+
+#menu li:hover{
+    background: rgba(0, 0, 0, 0.3);
+}
+
+#menu li a{
+    
+    display: block;
+    padding: 11px 20px;
+    color: #fff;
+    text-decoration: none;
+    background-color: #000;
+    border-radius: 10%;
+}
+#menu li a:hover{
+  
+    background: #16BFFD;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #CB3066, #16BFFD);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #CB3066, #16BFFD); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#menu li ul{
+    margin-top: 0px;
+    display: none;
+    position: absolute;
+    background: #4E94AB;
+    min-width: 100%;
+}
+
+#menu li:hover > ul{
+    display: block;
+   
+}
+
+#menu li ul li{
+    position: relative;
+}
+
+#menu li ul li ul{
+    right: -200px;
+    top: 0px;
+}
+
+
+#productos th a {
+    text-decoration: none;
+}
+
+#marcas h3{
+    background: #4E94AB;
+   
+}
+
+#adición p{
+    text-align: end;
+    text-decoration: none;
+}
+
+#adición a{
+    
+    text-decoration: none;
+}
+
+#grid-html a{
+    text-decoration: none;
+    text-align: justify;
+}
+
+#grid-html h2{
+    background: #16BFFD;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #CB3066, #16BFFD);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #CB3066, #16BFFD); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border: 1px solid #000;
+}
+
+#grid-html {
+
+    grid-template-columns: 50% 50%;
+    padding: 1em;
+}
+
+#grid-plus {
+
+    grid-template-columns: 50% 50%;
+    padding: 1em;
+}
+
+#grid-plus h2{
+    background: #4E94AB;
+    border: 1px solid #000;
+}
+#grid-plus h3{
+   
+    border: 1px solid #000;
+}
+
+#marcas h2{
+    background: #4E94AB;
+}
+
+#adición h2{
+    background: #4E94AB;
+}
+
+#cuerpo h2{
+    background:#4E94AB;
+    border: 1px solid #000;
+}
+
+#footer h2{
+    background: #4E94AB;
+    border: 1px solid #000;
+}
+
+#grid-html td{
+    text-align: center;
+}
+
+#autor{
+    padding: 20px;
+    text-align: center;
+}
+
+/*Para formato móvil*/
+@media (max-width:768px){
+
+    #menu{
+        position:relative;        
+        width: 70%;
+        margin-left:40%;
+        transition: all 0s;
+    }
+    #menu ul{
+        flex-direction: row;      
+        margin-top: 0%;  
+    }
+	#menu ul li ul{
+        flex-direction: column;      
+        margin-top: 0%; 
+		background-color: #fff; 
+		
+    }
+}
+

@@ -1,0 +1,186 @@
+<!--! DOCTYPE para HTML5 -->
+<!DOCTYPE html>
+<html lang="es">
+<!--! Todo lo necesario para vinculaciones tanto a JS como a CSS -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LiveforPadel</title>
+    <link rel="shortcut icon" href="imagenes/pelota.jpg" type="image/x-icon" />
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilo.css" />
+    <script src="media.js"></script>
+</head>
+
+<body onload="ocultar()">
+    <main id="main_media">
+        <!--! Etiqueta header propia de HTML5 -->
+        <header id="header">
+            <!--! Etiqueta nav propia de HTML5 -->
+            <nav id="menu">
+                <ul>
+                    <li><a href="media.html">Media</a>
+                        <ul>
+                            <li><a href="media.html#uno">Noticia1</a></li>
+                            <li><a href="media.html#dos">Noticia2</a></li>
+                            <li><a id="oculto1" href="media.html#tres">Noticia3</a></li>
+                            <li><a id="oculto2" href="media.html#cuatro">Noticia4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="registro.html">Registro</a></li>
+                </ul>
+            </nav>
+
+        </header>
+        <!--! Empezamos la tabla -->
+        <form method="post">
+
+            <div id="grid-html">
+                <h2>Noticias Nacionales</h2>
+                <br />
+                <div id="unouno">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th id="uno">XXXVII CAMPEONATO ABSOLUTO DE ESPAÑA</th>
+                                <th id="dos">PAQUITO NAVARRO HOSPITALIZADO</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>WIZINK CENTER – Fase Final</td>
+                                <td>El campeón español ha sufrido varios cortes, en las rodillas, <br />el codo y la
+                                    espalda,
+                                    aunque
+                                    su
+                                    estado no reviste gravedad</td>
+                            </tr>
+                            <tr>
+                                <td><img src="imagenes/campeonato.jpg" alt="campeonato" width="382" height="460" />
+                                </td>
+                                <td><img src="imagenes/paquito.jpg" alt="paquito" width="640" height="360" /></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Clubes de apoyo para las fases previas. <br />
+
+                                    Del 24 al 31 de octubre de 2021.<br />
+
+                                    Cierre Inscripción: Jueves 14 de octubre, a las 12.00 horas.
+                                </td>
+                                <td>
+                                    Tremendo susto durante el Oeiras Valley Portugal Master <br />de pádel que se
+                                    disputa
+                                    este
+                                    fin
+                                    de
+                                    semana en el Estadio Monumental de Lisboa.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://www.padelfederacion.es/Camp_Parejas.asp?IdTorneo=20152">Leer
+                                        Más</a>
+                                </td>
+                                <td>
+                                    <a href="https://www.youtube.com/watch?v=u0PGb8fNuBA">Leer Más</a>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+                <br />
+                <h2>Noticias Internacionales</h2>
+                <div id="restringido">
+                    <div id="banner">Pulsa el icono de twitter para abrir</div>
+                    <div id="banner1">Pulsa el icono de instagram para cerrar</div>
+                    <h1>ZONA RESTRINGIDA</h1>
+                </div>
+                <br />
+                <div id="dosdos">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th id="tres">FIP CELEBRA SU 30 ANIVERSARIO</th>
+                                <th id="cuatro">ACUERDO DECISIVO ENTRE WORLD PADEL TOUR Y LA FIP</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Feliz cumpleaños Federación Internacional de Pádel</td>
+                                <td>
+                                    Se crea una nueva categoría de torneos y se reducen las restricciones de
+                                    participación
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><img src="imagenes/FIP.jpg" alt="fip" width="525" height="295" /></td>
+                                <td><img src="imagenes/acuerdo.jpg" alt="acuerdo" width="640" height="360" /></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Celebramos este aniversario con todos los que forman parte de esta familia.
+                                    <br />Desde
+                                    las
+                                    federaciones nacionales afiliadas, los clubes, los jugadores, los entrenadores...
+                                </td>
+                                <td>
+                                    World Padel Tour y la Federación Internacional de Pádel han dado un nuevo <br /> y
+                                    decisivo
+                                    paso
+                                    para
+                                    consolidar las estructuras competitivas del pádel a nivel...
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://www.padelfip.com/es/2021/07/12/fip-celebra-su-30-aniversario/">Leer
+                                        Más</a>
+                                </td>
+                                <td>
+                                    <a
+                                        href="https://www.worldpadeltour.com/noticias/competicion/acuerdo-decisivo-entre-world-padel-tour-y-la-federacion-internacional-de-padel/">Leer
+                                        Más</a>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+
+            <div id="imagenes">
+                <br /><br />
+                <img src="imagenes/contacto_new_32.png" alt="contacto" width="50" height="50" />
+                <img src="imagenes/facebook_new_32.png" alt="facebook" width="50" height="50" />
+                <!--! Etiqueta picture propia de HTML5 -->
+                <picture>
+                    <!--! Incluye la funcion ocultar  -->
+                    <source media="(min-width: 800px)" srcset="imagenes/instagram_new_32.png">
+                    <img onclick="ocultar()" src="imagenes/tenis.png" alt="instagram" width="50" height="50" />
+                </picture>
+                <!--! Incluye la funcion mostrar  -->
+                <img onclick="mostrar()" src="imagenes/twitter_new_32.png" alt="twitter" width="50" height="50" />
+                <img src="imagenes/youtube_new_32.png" alt="youtube" width="50" height="50" />
+
+            </div>
+            <!--! Etiqueta footer propia de HTML5 -->
+            <footer id="autor">
+                <div id="capa">
+                    <small>
+                        Autor: Adrián Garrido Pantaleón &nbsp;&nbsp;&nbsp; Correo: <a
+                            href="mailto:adrian.garrido01@goumh.umh.es">adrian.garrido01@goumh.umh.es</a>
+                    </small>
+                    <!--! Animación hecha en JS  -->
+                    <div id="Animation"></div>
+                </div>
+            </footer>
+        </form>
+    </main>
+
+</body>
+
+</html>

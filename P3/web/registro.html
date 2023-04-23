@@ -1,0 +1,274 @@
+<!--! DOCTYPE para HTML5 -->
+<!DOCTYPE html>
+<html lang="es">
+<!--! Todo lo necesario para vinculaciones tanto a JS como a CSS -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LiveforPadel</title>
+    <link rel="shortcut icon" href="imagenes/pelota.jpg" type="image/x-icon" />
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+</head>
+
+<body>
+    <main>
+        <!--! Etiqueta header propia de HTML5 -->
+        <header id="header">
+            <!--! Etiqueta nav propia de HTML5 -->
+            <nav id="menu">
+                <ul>
+                    <li><a href="media.html">Media</a>
+                        <ul>
+                            <li><a href="media.html#uno">Noticia1</a></li>
+                            <li><a href="media.html#dos">Noticia2</a></li>
+                            <li><a href="media.html#tres">Noticia3</a></li>
+                            <li><a href="media.html#cuatro">Noticia4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="registro.html">Registro</a></li>
+                </ul>
+            </nav>
+
+        </header>
+        <!--! Empezamos el formulario  -->
+        <form class="formulario" id="formulario" method="post">
+
+            <!--! Grupo: Nombre -->
+            <div class="formulario__grupo" id="grupo__nombre">
+                <label for="nombre" class="formulario__label">Nombre</label>
+                <div class="formulario__grupo-input">
+                    <input required pattern="[a-zA-ZÀ-ÿ\s]{4,16}" type="text" class="formulario__input" name="nombre"
+                        id="nombre" placeholder="Adrian">
+                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                </div>
+                <p class="formulario__input-error">El nombre tiene que ser de 4 a 16 dígitos y puede tener letras,
+                    espacios y llevar acentos.</p>
+            </div>
+
+            <!--! Grupo: Apellidos -->
+            <div class="formulario__grupo" id="grupo__apellidos">
+                <label for="apellidos" class="formulario__label">Apellidos</label>
+                <div class="formulario__grupo-input">
+                    <input type="text" class="formulario__input" name="apellidos" id="apellidos"
+                        placeholder="Garrido Pantaleón">
+                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                </div>
+                <p class="formulario__input-error">Los apellidos pueden tener letras, espacios y llevar acentos.</p>
+            </div>
+
+            <!--! Grupo: Usuario -->
+            <div class="formulario__grupo" id="grupo__usuario">
+                <label for="usuario" class="formulario__label">Usuario</label>
+                <div class="formulario__grupo-input">
+                    <input required pattern="[a-zA-Z0-9]{4,16}" type="text" class="formulario__input" name="usuario"
+                        id="usuario" placeholder="adri123">
+                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                </div>
+                <p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener
+                    numeros, letras y guion bajo.</p>
+            </div>
+
+            <!--! Grupo: DNI -->
+            <div class="formulario__grupo" id="grupo__dni">
+                <label for="dni" class="formulario__label">DNI</label>
+                <div class="formulario__grupo-input">
+                    <input required type="text" class="formulario__input" name="dni" id="dni" placeholder="11222333A"
+                        onchange="validarDni(this)">
+                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                </div>
+                <p id="dnimal"></p>
+            </div>
+
+            <!--! Grupo: Contraseña -->
+            <div class="formulario__grupo" id="grupo__password">
+                <label for="password" class="formulario__label">Contraseña</label>
+                <div class="formulario__grupo-input">
+                    <input required pattern="{4,12}" type="password" class="formulario__input" name="password"
+                        id="password">
+                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                </div>
+                <p class="formulario__input-error">La contraseña tiene que ser de 4 a 12 dígitos.</p>
+            </div>
+
+            <!--! Grupo: Contraseña 2 -->
+            <div class="formulario__grupo" id="grupo__password2">
+                <label for="password2" class="formulario__label">Repetir Contraseña</label>
+                <div class="formulario__grupo-input">
+                    <input type="password" class="formulario__input" name="password2" id="password2">
+                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                </div>
+                <p class="formulario__input-error">Ambas contraseñas deben ser iguales.</p>
+            </div>
+
+            <!--! Grupo: Correo Electronico -->
+            <div class="formulario__grupo" id="grupo__correo">
+                <label for="correo" class="formulario__label">Correo Electrónico</label>
+                <div class="formulario__grupo-input">
+                    <input required pattern="[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+" type="email"
+                        class="formulario__input" name="correo" id="correo" placeholder="correo@correo.com">
+                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                </div>
+                <p class="formulario__input-error">El correo solo puede contener letras, numeros, puntos, guiones y
+                    guion bajo.</p>
+            </div>
+
+            <!--! Grupo: Fecha -->
+            <div class="formulario__grupo" id="grupo__fecha">
+                <label for="fecha" class="formulario__label">Fecha</label>
+                <div class="formulario__grupo-input">
+                    <input type="date" id="fecha" name="fecha" onchange="validarFecha()"
+                        class="formulario__input" /><br /><br />
+                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                </div>
+                <p id="formulario__input-error"></p>
+
+            </div>
+
+            <!--! Grupo: Teléfono -->
+            <div class="formulario__grupo" id="grupo__telefono">
+                <label for="telefono" class="formulario__label">Teléfono</label>
+                <div class="formulario__grupo-input">
+                    <input type="text" class="formulario__input" name="telefono" pattern="^([0-9]{9})$" id="telefono"
+                        placeholder="666300123">
+                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                </div>
+                <p class="formulario__input-error">El telefono solo puede contener numeros y el maximo son 9
+                    dígitos.
+                </p>
+            </div>
+
+            <!--! Grupo: URL -->
+            <div class="formulario__grupo" id="grupo__url">
+                <label for="url" class="formulario__label">URL</label>
+                <div class="formulario__grupo-input">
+                    <input type="text" class="formulario__input" name="url" id="url" placeholder="https://umh.es">
+                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                </div>
+                <p class="formulario__input-error">La URL debe existir.
+                </p>
+            </div>
+
+            <!--! Grupo: Comunidades -->
+            <div class="formulario__grupo" id="grupo__comunidades">
+                <label for="comunidades" class="formulario__label">C.Autónoma y Provincia</label>
+                <div class="formulario__grupo-input">
+                    <input style="display: none;" class="formulario__input" id="comunidades" name="comunidades">
+                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                    <select required name="comunidadAutonoma" id="CA" onchange="loadProv(this)">
+                        <option value="">-----Seleccione-----</option>
+                        <option value="Andalucia">Andalucia</option>
+                        <option value="Aragon">Aragon</option>
+                        <option value="Asturias">Asturias</option>
+                        <option value="Baleares">Baleares</option>
+                        <option value="Canarias">Canarias</option>
+                        <option value="Cantabria">Cantabria</option>
+                        <option value="Castilla la Mancha">Castilla la Mancha</option>
+                        <option value="Castilla y leon">Castilla y leon</option>
+                        <option value="Catalunya">Catalunya</option>
+                        <option value="Ceuta">Ceuta</option>
+                        <option value="C.valenciana">C.valenciana</option>
+                        <option value="Extremadura">Extremadura</option>
+                        <option value="Galicia">Galicia</option>
+                        <option value="La Rioja">La Rioja</option>
+                        <option value="Madrid">Madrid</option>
+                        <option value="Melilla">Melilla</option>
+                        <option value="Murcia">Murcia</option>
+                        <option value="Navarra">Navarra</option>
+                        <option value="Pais Vasco">Pais Vasco</option>
+                    </select>
+                    <select name="provincia" id="prov"></select>
+                </div>
+            </div>
+
+            <!--! Grupo: Productos de Interés -->
+            <div class="formulario__grupo" id="grupo__interes">
+                <label for="interes" class="formulario__label">Productos de mayor interés</label>
+                <div class="formulario__grupo-input">
+                    <input style="display: none;" class="formulario__input" id="interes" name="prodInt">
+                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                    <select required name="ProductosInteres" id="PI" onchange="loadProd(this)">
+                        <option value="">-----Seleccione-----</option>
+                        <option value="PALAS DE PADEL">PALAS DE PADEL</option>
+                        <option value="ZAPATILLAS">ZAPATILLAS</option>
+                        <option value="PALETEROS">PALETEROS</option>
+                        <option value="ACCESORIOS">ACCESORIOS</option>
+                        <option value="OFERTAS">OFERTAS</option>
+
+                    </select>
+                    <select name="Productos" id="prod"></select>
+                </div>
+            </div>
+
+            <!--! Grupo: Terminos y Condiciones -->
+            <div class="formulario__grupo" id="grupo__terminos">
+                <label class="formulario__label">
+                    <input class="formulario__checkbox" type="checkbox" name="terminos" id="terminos" required>
+                    Acepto los Terminos y Condiciones
+                </label>
+                <br />
+            </div>
+
+            <!--! Grupo: Comunicaciones Comerciales -->
+            <div class="formulario__grupo" id="grupo__comunicaciones">
+                <label class="formulario__label">
+                    <input class="formulario__checkbox" type="checkbox" name="comunicaciones" id="comunicaciones">
+                    Deseo recibir comunicaciones comerciales
+                </label>
+                <br />
+            </div>
+
+            <div class="formulario__mensaje" id="formulario__mensaje">
+                <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario
+                    correctamente. </p>
+            </div>
+
+            <div class="formulario__grupo formulario__grupo-btn-enviar">
+                <input type="submit" class="formulario__btn" id="button" value="Enviar">
+                <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!
+                </p>
+            </div>
+
+            <div class="formulario__grupo formulario__grupo-btn-limpiar">
+                <button type="reset" class="formulario__btn">Limpiar</button>
+            </div>
+
+            <div id="imagenes">
+                <br /><br />
+
+                <img src="imagenes/contacto_new_32.png" alt="contacto" width="50" height="50" />
+                <img src="imagenes/facebook_new_32.png" alt="facebook" width="50" height="50" />
+                <!--! Etiqueta picture propia de HTML5 -->
+                <picture>
+                    <!--! Incluye la funcion ocultar  -->
+                    <source media="(min-width: 800px)" srcset="imagenes/instagram_new_32.png">
+                    <img onclick="ocultar()" src="imagenes/tenis.png" alt="instagram" width="50" height="50" />
+                </picture>
+                <!--! Incluye la funcion mostrar  -->
+                <img onclick="mostrar()" src="imagenes/twitter_new_32.png" alt="twitter" width="50" height="50" />
+                <img src="imagenes/youtube_new_32.png" alt="youtube" width="50" height="50" />
+
+
+            </div>
+            <!--! Etiqueta footer propia de HTML5 -->
+            <footer id="autor">
+                <div>
+                    <small>
+                        Autor: Adrián Garrido Pantaleón &nbsp;&nbsp;&nbsp; <br> Correo: <a
+                            href="mailto:adrian.garrido01@goumh.umh.es">adrian.garrido01@goumh.umh.es</a>
+                    </small>
+                </div>
+            </footer>
+        </form>
+    </main>
+    <!--! Vinculación con JavaScript -->
+    <script src="registro.js"></script>
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

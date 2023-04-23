@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="cuestionario" type="tipoCuestionario"/>
+    <xsd:complexType name="tipoCuestionario">
+        <xsd:sequence>
+            <xsd:element name="pregunta" type="tipoPregunta" minOccurs="1" maxOccurs="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="tipoPregunta">
+        <xsd:sequence>
+            <xsd:element name="enunciado" type="xsd:string" minOccurs="1" maxOccurs="unbounded"/>
+            <xsd:element name="respuesta" type="tipoRespuesta" minOccurs="1" maxOccurs="unbounded"/>
+        </xsd:sequence>
+        <xsd:attribute name="identificador" type="tipoId" use="required"/>
+        <xsd:attribute name="tipo" type="tipoTipo" use="required"/>
+        <xsd:attribute name="nombre" type="tipoNombre" use="required"/>
+        <xsd:attribute name="apellido" type="tipoApellido" use="required"/>
+        <xsd:attribute name="apellido2" type="tipoApellido2" use="optional"/>
+        <xsd:attribute name="fecha" type="tipoFecha" use="optional"/>
+        <xsd:attribute name="tema" type="tipoTema" use="required"/>
+    </xsd:complexType>
+    <xsd:complexType name="tipoRespuesta">
+        <xsd:sequence>
+            <xsd:element name="resp1" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+            <xsd:element name="resp2" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+            <xsd:element name="resp3" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+            <xsd:element name="resp4" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+            <xsd:element name="respnum" type="tiponum" minOccurs="0" maxOccurs="1"/>
+            <xsd:element name="resplibre" type="tipolibre" minOccurs="0" maxOccurs="1"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="tiponum">
+        <xsd:simpleContent>
+            <xsd:extension base ="xsd:string">
+                <xsd:attribute name="min" use="required"/>
+                <xsd:attribute name="max" use="required"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="tipolibre">
+        <xsd:simpleContent>
+            <xsd:extension base ="xsd:string">
+                <xsd:attribute name="rows" use="required"/>
+                <xsd:attribute name="cols" use="required"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:simpleType name="tipoId">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="pregunta1"/>
+            <xsd:enumeration value="pregunta2"/>
+            <xsd:enumeration value="pregunta3"/>
+            <xsd:enumeration value="pregunta4"/>
+            <xsd:enumeration value="pregunta5"/>
+            <xsd:enumeration value="pregunta6"/>
+            <xsd:enumeration value="pregunta7"/>
+            <xsd:enumeration value="pregunta8"/>
+            <xsd:enumeration value="pregunta9"/>
+            <xsd:enumeration value="pregunta10"/>
+            <xsd:enumeration value="pregunta11"/>
+            <xsd:enumeration value="pregunta12"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="tipoTipo">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="booleana"/>
+            <xsd:enumeration value="numerica"/>
+            <xsd:enumeration value="libre"/>
+            <xsd:enumeration value="test_unica"/>
+            <xsd:enumeration value="ordenar"/>
+            <xsd:enumeration value="test_multiple"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="tipoNombre">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="Jesus"/>
+            <xsd:enumeration value="Adrian"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="tipoApellido">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="Luna"/>
+            <xsd:enumeration value="Garrido"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="tipoApellido2">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="Garcia"/>
+            <xsd:enumeration value="Pantaleon"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="tipoFecha">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="Noviembre 2021"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="tipoTema">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="tema1"/>
+            <xsd:enumeration value="tema2"/>
+            <xsd:enumeration value="tema3"/>
+            <xsd:enumeration value="tema4"/>
+            <xsd:enumeration value="tema5"/>
+            <xsd:enumeration value="tema6"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+</xsd:schema>

@@ -1,0 +1,25 @@
+<!ELEMENT cuestionario (pregunta+)>
+<!ELEMENT pregunta (enunciado,respuesta)>
+<!ELEMENT enunciado (#PCDATA)>
+<!ELEMENT respuesta (resp1?,resp2?,resp3?,resp4?,respnum?,resplibre?)>
+<!ELEMENT resp1 (#PCDATA)>
+<!ELEMENT resp2 (#PCDATA)>
+<!ELEMENT resp3 (#PCDATA)>
+<!ELEMENT resp4 (#PCDATA)>
+<!ELEMENT respnum (#PCDATA)>
+<!ELEMENT resplibre (#PCDATA)>
+<!ATTLIST pregunta
+    identificador ID #REQUIRED
+    tipo (test_multiple|test_unica|numerica|libre|booleana|ordenar) #REQUIRED
+    nombre CDATA #REQUIRED
+    apellido CDATA #REQUIRED
+    apellido2 CDATA #IMPLIED
+    fecha CDATA #IMPLIED
+    tema (tema1|tema2|tema3|tema4|tema5|tema6|tema7|tema8|tema9|tema10|tema11|tema12) #REQUIRED>
+<!ATTLIST respnum
+    min CDATA #REQUIRED
+    max CDATA #REQUIRED>
+<!ATTLIST resplibre
+    rows CDATA #REQUIRED
+    cols CDATA #REQUIRED>
+ 

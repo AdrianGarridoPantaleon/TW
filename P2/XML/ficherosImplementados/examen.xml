@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-stylesheet type="text/css" href="examen.css"?>
+<?xml-stylesheet type="html/xsl" href="basico.xsl"?>
+<?xml-stylesheet type="html/xsl" href="avanzado.xsl"?>
+<!DOCTYPE cuestionario SYSTEM "gramatica.dtd">
+
+<cuestionario>
+
+    <pregunta identificador="pregunta1" tipo ="booleana" nombre="Jesus" apellido="Luna" apellido2="Garcia" fecha="Noviembre 2021" tema="tema2">
+
+        <enunciado>Respecto a las TW. ¿Tienes conocimiento de xml?</enunciado>
+        <respuesta>
+            <resp1>Si</resp1>
+            <resp2>No</resp2>
+        </respuesta>
+    </pregunta>
+
+    <pregunta identificador="pregunta2" tipo ="numerica" nombre="Adrian" apellido="Garrido" apellido2="Pantaleon" fecha="Noviembre 2021" tema="tema3">
+
+        <enunciado>Del uno al diez, ¿te ves trabajando en un futuro de diseñador web?</enunciado>
+        <respuesta>
+            <respnum min="0" max="10"></respnum>
+        </respuesta>
+    </pregunta>
+
+    <pregunta identificador="pregunta3" tipo ="libre" nombre="Jesus" apellido="Luna" apellido2="Garcia" fecha="Noviembre 2021" tema="tema4">
+
+        <enunciado>Nombrame tres ventajas de usar el formato XML</enunciado>
+        <respuesta>
+            <resplibre rows="3" cols="50"></resplibre>
+        </respuesta>
+    </pregunta>
+
+    <pregunta identificador="pregunta4" tipo ="test_unica" nombre="Adrian" apellido="Garrido" apellido2="Pantaleon" fecha="Noviembre 2021" tema="tema5">
+
+        <enunciado>¿Qué método se tiene que utilizar para hacer un login?</enunciado>
+        <respuesta>
+            <resp1>Get</resp1>
+            <resp2>Form</resp2>
+            <resp3>Post</resp3>
+            <resp4>Input</resp4>
+        </respuesta>
+    </pregunta>
+
+    <pregunta identificador="pregunta5" tipo ="ordenar" nombre="Adrian" apellido="Garrido" apellido2="Pantaleon" fecha="Noviembre 2021" tema="tema6">
+
+        <enunciado>En una página HTML, ¿cual es el orden que siguen las etiquetas?</enunciado>
+        <respuesta>
+            <resp1>Header</resp1>
+            <resp2>Footer</resp2>
+            <resp3>Body</resp3>
+        </respuesta>
+    </pregunta>
+
+    <pregunta identificador="pregunta6" tipo ="booleana" nombre="Jesus" apellido="Luna" apellido2="Garcia" fecha="Noviembre 2021" tema="tema1">
+
+        <enunciado>¿Es necesario usar el DOCTYPE tanto para HTML como para XML?</enunciado>
+        <respuesta>
+            <resp1>Si</resp1>
+            <resp2>No</resp2>
+        </respuesta>
+    </pregunta>
+
+    <pregunta identificador="pregunta7" tipo ="numerica" nombre="Jesus" apellido="Luna" apellido2="Garcia" fecha="Noviembre 2021" tema="tema1">
+
+        <enunciado>Del uno al diez, ¿Qué de importante es la extensión DTD ?</enunciado>
+        <respuesta>
+            <respnum min="0" max="10"></respnum>
+        </respuesta>
+
+    </pregunta>
+
+    <pregunta identificador="pregunta8" tipo ="libre" nombre="Adrian" apellido="Garrido" apellido2="Pantaleon" fecha="Noviembre 2021" tema="tema3">
+
+        <enunciado>¿Para qué sirve el XML?</enunciado>
+        <respuesta>
+            <resplibre rows="3" cols="50"></resplibre>
+        </respuesta>
+    </pregunta>
+
+    <pregunta identificador="pregunta9" tipo ="test_multiple" nombre="Jesus" apellido="Luna" apellido2="Garcia" fecha="Noviembre 2021" tema="tema2">
+
+        <enunciado>Variantes de HTML</enunciado>
+        <respuesta>
+            <resp1>Estricta</resp1>
+            <resp2>Transicional</resp2>
+            <resp3>Con frames</resp3>
+            <resp4>Base de datos</resp4>
+        </respuesta>
+    </pregunta>
+
+    <pregunta identificador="pregunta10" tipo ="ordenar" nombre="Adrian" apellido="Garrido" apellido2="Pantaleon" fecha="Noviembre 2021" tema="tema5">
+
+        <enunciado>Ordena de menos a más importante las siguientes características:</enunciado>
+        <respuesta>
+            <resp1>ELEMENT</resp1>
+            <resp2>ATTLIST</resp2>
+            <resp3>FIXED</resp3>
+        </respuesta>
+    </pregunta>
+
+    <pregunta identificador="pregunta11" tipo ="booleana" nombre="Adrian" apellido="Garrido" apellido2="Pantaleon" fecha="Noviembre 2021" tema="tema4">
+
+        <enunciado>Para el texto sin caracteres de marcado, ¿Se utiliza  el #PCDATA?</enunciado>
+        <respuesta>
+            <resp1>Si</resp1>
+            <resp2>No</resp2>
+        </respuesta>
+    </pregunta>
+
+    <pregunta identificador="pregunta12" tipo ="numerica" nombre="Jesus" apellido="Luna" apellido2="Garcia" fecha="Noviembre 2021" tema="tema6">
+
+        <enunciado>Del uno al diez, ¿Qué de interesante te ha parecido esta práctica?</enunciado>
+        <respuesta>
+            <respnum min="0" max="10"></respnum>
+        </respuesta>
+    </pregunta>
+
+</cuestionario>
+
